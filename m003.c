@@ -25,19 +25,25 @@ int is_prime (int a)
 {
   int i, n;
 
+  i = 2;
   n = 1;
 
+  if(a == 0)
+    n = 0;
   if(a == 1)
     n = 0;
+  if(a ==2)
+   n = 1 ;
 
-   else {
-   for(i = 2; i < a; i++)
+  else {
+   while(i<a)
    {
      if (a%i == 0)
      {
       n = 0;
       break;
      }
+     i++;
    }
    }
   return n;
