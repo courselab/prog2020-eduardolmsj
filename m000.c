@@ -25,7 +25,24 @@
 
 int pitagorean (char *s)
 {
-  return 0;
+  int i, n, count;
+  i = 0;
+  count = 0;
+
+  while (s[i] != 0)
+  {
+      if (s[i]>=97 && s[i]<=122) {
+      n = (s[i]-97)%9 + 1;
+      count = count + n;
+      }
+      if (s[i]>=65 && s[i]<=90) {
+      n = (s[i]-65)%9 + 1;
+      count = count + n;
+      }
+      i++;
+  }
+  return count;
+  /* a função esta diferente pois eu tentei reproduzir por conta um dia após ver o vídeo,somente para teste */
 }
 
 /* Do not edit function main. */
