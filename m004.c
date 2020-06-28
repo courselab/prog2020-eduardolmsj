@@ -27,10 +27,30 @@
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
 
+/*função para elevar um numero à uma potencia*/
+int potencia(int numero, int potencia_elevada)
+{
+  int i, n;
+  n = 1;
+  for(i = 0; i < potencia_elevada; i++)
+  {
+    n = n*numero;
+  }
+  return n;
+}
+
 int decimal (char *b)
 {
-  
-  return 0;
+  int i, j, mal_da_humanidade, aaa;
+  aaa = strlen(b);
+  mal_da_humanidade = 0;
+  j = 0;
+  for(i = strlen(b)-1; i != -1; i--)
+  {
+    j = j + ( (b[i]-48) * potencia(2,mal_da_humanidade));
+    mal_da_humanidade++;
+  }
+  return j;
 }
 
 #define USAGE "m004 <string>\n"
