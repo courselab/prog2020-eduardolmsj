@@ -24,7 +24,13 @@
 int is_prime (int a)
 {
   int i, n;
+
   n = 1;
+
+  if(a == 1)
+    n = 0;
+
+   else {
    for(i = 2; i < a; i++)
    {
      if (a%i == 0)
@@ -32,6 +38,7 @@ int is_prime (int a)
       n = 0;
       break;
      }
+   }
    }
   return n;
 }
