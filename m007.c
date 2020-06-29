@@ -28,7 +28,13 @@
 
 int lettercount (char *s)
 {
-  return 0;
+  int i = 0, j = 0;
+  while(s[i] != 0)
+  {if(s[i] != 32)
+   j++;
+   i++;
+  }
+  return j-1;
 }
 
 
