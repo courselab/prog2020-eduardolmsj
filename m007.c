@@ -30,11 +30,19 @@ int lettercount (char *s)
 {
   int i = 0, j = 0;
   while(s[i] != 0)
-  {if(s[i] != 32)
+  {
+  if(s[i]>='A' && s[i]<='Z')
+  {
    j++;
+  }
+  if(s[i]>='a' && s[i]<='z') 
+  {
+   j++;
+  }
+  
    i++;
   }
-  return j-1;
+  return j;
 }
 
 
