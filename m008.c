@@ -28,25 +28,13 @@
 /* Converts the string 's' from first-middle-last name 
    form into LAST-first-middle form. */
 
-int space_counter(char *s)
-{
-  int i, n = 0;
-  
-  for(i = 0; s[i] != 0; i++)
-  {
-    if (s[i] == ' ')
-     n++;
-  }
-  return n;
-}
 
 void lastname (char *s)
 {
   char fname[100], mnames[500], lname[100], lnameinv[100];
-  int i, n, j, k, z, w, x, ae, teste;
+  int i, j, k, z, w, x, ae, teste;
 
   k = 0;
-  n = space_counter(s);
 
   for (i = 0; s[i] != ' '; i++) //primeiro nome
    {
@@ -103,6 +91,7 @@ void lastname (char *s)
      s[ae] = lname[ae] - ('a'-'A');
    }
    s[ae] = ',';
+   s[ae+1] = ' ';
    ae+= 2;
    while(fname[teste] != 0)
    {
