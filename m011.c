@@ -36,7 +36,7 @@ int wordcount (char *filename)
 
   while( fgets(a, 5120, fp) != NULL)
   {
-    printf("%s", a);
+    //printf("%s", a);
     for(i = 0;a[i] != '\0' ; i++) {
       if (a[i] == ' ' && a[i+1] != ' ')
         {
