@@ -28,7 +28,28 @@
 
 int wordcount (char *filename)
 {
-  return 0;
+  FILE *fp;
+  char a[5120];
+  int i = 0, count=0;
+
+  fp = fopen(filename, "r");
+
+  while( fgets(a, 5120, fp) != NULL)
+  {
+    printf("%s", a);
+    for(i = 0;a[i] != '\0' ; i++) {
+      if (a[i] == ' ' && a[i+1] != ' ')
+        {
+        count++; 
+        }
+      }
+   count++;
+   if(a[0] == 10)
+    count--;
+  }
+  fclose(fp);
+
+  return count;
 }
 
 /* Do not edit function main. */
